@@ -1,0 +1,4 @@
+cookies.p
+venv
+__pycache__
+*.egg-info
