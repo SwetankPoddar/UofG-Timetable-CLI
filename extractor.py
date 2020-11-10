@@ -8,8 +8,10 @@ import os
 import pickle
 
 @click.group(invoke_without_command=True)
-def cli():
-    show_timetable()
+@click.pass_context
+def cli(ctx):
+    if ctx.invoked_subcommand is None:
+        show_timetable()
 
 @cli.command()
 @click.argument('guid')

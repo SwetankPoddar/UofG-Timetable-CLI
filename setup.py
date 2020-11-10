@@ -1,9 +1,15 @@
 from setuptools import setup
 
 setup(
-    name="UofG Timetable CLI",
-    version="0.1",
+    name="uofg-timetable",
+    version="0.2",
     py_modules=['extractor'],
+    license="MIT",
+    author="Swetank Poddar",
+    author_email="hello@swetankpoddar.me",
+    url="https://github.com/SwetankPoddar/UofG-Timetable-CLI/",
+    download_url="https://github.com/SwetankPoddar/UofG-Timetable-CLI/archive/v0.2.tar.gz",
+    keywords = ["UofG", "timetable", "University of Glasgow", "Glasgow"],
     install_requires = [
         'Click',
         'requests',
@@ -11,6 +17,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        timetable_2=extractor:cli
+        timetable=extractor:cli
     ''',
 )
